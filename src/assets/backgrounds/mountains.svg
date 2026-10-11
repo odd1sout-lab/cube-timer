@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b1646"/>
+      <stop offset=".36" stop-color="#4a2f7a"/>
+      <stop offset=".6" stop-color="#c8527a"/>
+      <stop offset=".78" stop-color="#ff9a6b"/>
+      <stop offset="1" stop-color="#ffd59a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff3d1"/>
+      <stop offset=".25" stop-color="#ffd08a" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ff9a6b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8d5f9c"/>
+      <stop offset="1" stop-color="#e29aa0"/>
+    </linearGradient>
+    <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4c3a7a"/>
+      <stop offset="1" stop-color="#9a5f94"/>
+    </linearGradient>
+    <linearGradient id="near" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f1a3f"/>
+      <stop offset="1" stop-color="#34265a"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="mist" x="-10%" y="-100%" width="120%" height="300%"><feGaussianBlur stdDeviation="32"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .6 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1200" fill="url(#sky)"/>
+
+  <g fill="#fff" opacity=".7">
+    <circle cx="200" cy="120" r="1.8"/><circle cx="520" cy="250" r="1.4"/><circle cx="880" cy="90" r="1.8"/>
+    <circle cx="1340" cy="170" r="1.5"/><circle cx="1620" cy="70" r="2"/><circle cx="1760" cy="290" r="1.4"/>
+    <circle cx="310" cy="330" r="1.3"/><circle cx="1010" cy="290" r="1.4"/><circle cx="1450" cy="350" r="1.2"/>
+    <circle cx="700" cy="160" r="1.2"/><circle cx="90" cy="260" r="1.6"/><circle cx="1860" cy="180" r="1.5"/>
+  </g>
+
+  <circle cx="1180" cy="800" r="440" fill="url(#sun)"/>
+
+  <path filter="url(#soft)" fill="url(#far)"
+        d="M0 760 L140 690 L260 730 L420 630 L560 720 L700 650 L860 740 L1010 660 L1160 735 L1330 640 L1500 725 L1660 660 L1800 720 L1920 680 L1920 1200 L0 1200Z"/>
+  <ellipse cx="960" cy="830" rx="1200" ry="60" fill="#ffd9c4" opacity=".4" filter="url(#mist)"/>
+
+  <path fill="url(#mid)"
+        d="M0 880 L180 780 L330 850 L520 740 L700 860 L860 800 L1040 890 L1230 770 L1420 880 L1600 790 L1760 860 L1920 800 L1920 1200 L0 1200Z"/>
+  <ellipse cx="900" cy="940" rx="1200" ry="60" fill="#ffc7b8" opacity=".3" filter="url(#mist)"/>
+
+  <path fill="url(#near)"
+        d="M0 1010 L220 900 L400 980 L610 880 L820 990 L1000 930 L1230 1020 L1450 910 L1660 990 L1920 920 L1920 1200 L0 1200Z"/>
+
+  <rect width="1920" height="1200" filter="url(#grain)" opacity=".1"/>
+</svg>

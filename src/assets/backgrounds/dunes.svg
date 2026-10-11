@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1055"/>
+      <stop offset=".35" stop-color="#7a2a7a"/>
+      <stop offset=".58" stop-color="#d4456a"/>
+      <stop offset=".75" stop-color="#ff8c42"/>
+      <stop offset="1" stop-color="#ffd27a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fffbe6"/>
+      <stop offset=".3" stop-color="#ffe29a" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#ff9a52" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="d1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9597a"/><stop offset="1" stop-color="#9a3a6a"/></linearGradient>
+    <linearGradient id="d2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a23a73"/><stop offset="1" stop-color="#5e2a62"/></linearGradient>
+    <linearGradient id="d3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5e2a62"/><stop offset="1" stop-color="#32184d"/></linearGradient>
+    <linearGradient id="d4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b1546"/><stop offset="1" stop-color="#150a2a"/></linearGradient>
+    <filter id="haze" x="-10%" y="-100%" width="120%" height="300%"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .6 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1200" fill="url(#sky)"/>
+  <circle cx="1240" cy="760" r="420" fill="url(#sun)"/>
+  <circle cx="1240" cy="760" r="92" fill="#fffbe6"/>
+
+  <path fill="url(#d1)" d="M0 800 C 300 740, 520 800, 800 770 S 1400 720, 1920 790 L1920 1200 L0 1200Z"/>
+  <ellipse cx="960" cy="820" rx="1200" ry="50" fill="#ffc07a" opacity=".35" filter="url(#haze)"/>
+  <path fill="url(#d2)" d="M0 900 C 260 820, 600 930, 980 860 S 1560 830, 1920 900 L1920 1200 L0 1200Z"/>
+  <path fill="none" stroke="#ffb27a" stroke-opacity=".45" stroke-width="3" d="M0 900 C 260 820, 600 930, 980 860 S 1560 830, 1920 900"/>
+  <path fill="url(#d3)" d="M0 1010 C 380 940, 700 1050, 1120 980 S 1640 950, 1920 1030 L1920 1200 L0 1200Z"/>
+  <path fill="none" stroke="#e58aa0" stroke-opacity=".35" stroke-width="3" d="M0 1010 C 380 940, 700 1050, 1120 980 S 1640 950, 1920 1030"/>
+  <path fill="url(#d4)" d="M0 1120 C 420 1060, 900 1150, 1300 1090 S 1700 1070, 1920 1120 L1920 1200 L0 1200Z"/>
+
+  <rect width="1920" height="1200" filter="url(#grain)" opacity=".1"/>
+</svg>

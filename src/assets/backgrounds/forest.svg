@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17434a"/>
+      <stop offset=".45" stop-color="#4f8b88"/>
+      <stop offset=".75" stop-color="#a9d3c8"/>
+      <stop offset="1" stop-color="#e3f3ea"/>
+    </linearGradient>
+    <filter id="fog" x="-20%" y="-100%" width="140%" height="300%"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .6 0"/>
+    </filter>
+    
+    <pattern id="p1" width="110" height="260" patternUnits="userSpaceOnUse" patternTransform="translate(30 520) scale(1.1)">
+      <path fill="#7fb0a6" d="M55 8 L88 100 H70 L100 175 H78 L108 250 H2 L32 175 H10 L40 100 H22Z"/>
+    </pattern>
+    <pattern id="p2" width="110" height="260" patternUnits="userSpaceOnUse" patternTransform="translate(-10 640) scale(1.7)">
+      <path fill="#3f7a76" d="M55 8 L88 100 H70 L100 175 H78 L108 250 H2 L32 175 H10 L40 100 H22Z"/>
+    </pattern>
+    <pattern id="p3" width="110" height="260" patternUnits="userSpaceOnUse" patternTransform="translate(50 800) scale(2.6)">
+      <path fill="#0f3a3d" d="M55 8 L88 100 H70 L100 175 H78 L108 250 H2 L32 175 H10 L40 100 H22Z"/>
+    </pattern>
+  </defs>
+
+  <rect width="1920" height="1200" fill="url(#sky)"/>
+  <circle cx="1450" cy="330" r="240" fill="#fff8df" opacity=".55" filter="url(#fog)"/>
+
+  
+  <rect x="0" y="520" width="1920" height="286" fill="url(#p1)" filter="url(#soft)" opacity=".85"/>
+  <ellipse cx="960" cy="760" rx="1300" ry="70" fill="#eaf7f0" opacity=".75" filter="url(#fog)"/>
+
+  
+  <rect x="0" y="640" width="1920" height="442" fill="url(#p2)" opacity=".95"/>
+  <ellipse cx="800" cy="900" rx="1300" ry="70" fill="#dff1e8" opacity=".5" filter="url(#fog)"/>
+
+  
+  <rect x="0" y="800" width="1920" height="676" fill="url(#p3)"/>
+  <rect y="1060" width="1920" height="140" fill="#0a2a2e"/>
+
+  <rect width="1920" height="1200" filter="url(#grain)" opacity=".1"/>
+</svg>

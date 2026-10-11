@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#040815"/>
+      <stop offset=".55" stop-color="#0a1a36"/>
+      <stop offset="1" stop-color="#12304a"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="55"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="2.5"/></filter>
+    
+    <pattern id="pinesBack" width="110" height="260" patternUnits="userSpaceOnUse" patternTransform="translate(40 640) scale(1.5)">
+      <path fill="#0a1a2c" d="M55 8 L88 100 H70 L100 175 H78 L108 250 H2 L32 175 H10 L40 100 H22Z"/>
+    </pattern>
+    <pattern id="pinesFront" width="110" height="260" patternUnits="userSpaceOnUse" patternTransform="translate(0 780)">
+      <path fill="#050c18" d="M55 8 L88 100 H70 L100 175 H78 L108 250 H2 L32 175 H10 L40 100 H22Z"/>
+    </pattern>
+  </defs>
+
+  <rect width="1920" height="1200" fill="url(#sky)"/>
+
+  <g fill="#fff" opacity=".75">
+    <circle cx="140" cy="90" r="1.6"/><circle cx="360" cy="210" r="1.3"/><circle cx="610" cy="70" r="1.8"/>
+    <circle cx="820" cy="170" r="1.2"/><circle cx="1010" cy="60" r="1.5"/><circle cx="1230" cy="150" r="1.7"/>
+    <circle cx="1480" cy="80" r="1.3"/><circle cx="1690" cy="200" r="1.6"/><circle cx="1840" cy="110" r="1.2"/>
+    <circle cx="260" cy="400" r="1.2"/><circle cx="930" cy="330" r="1.1"/><circle cx="1560" cy="380" r="1.3"/>
+    <circle cx="460" cy="130" r="1"/><circle cx="1100" cy="250" r="1"/><circle cx="1750" cy="430" r="1.1"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <ellipse cx="700" cy="390" rx="640" ry="110" fill="#3dffb0" opacity=".55" transform="rotate(-12 700 390)"/>
+    <ellipse cx="1180" cy="340" rx="700" ry="90" fill="#35c7ff" opacity=".5" transform="rotate(-8 1180 340)"/>
+    <ellipse cx="1480" cy="470" rx="540" ry="100" fill="#9d6bff" opacity=".45" transform="rotate(-18 1480 470)"/>
+    <ellipse cx="460" cy="540" rx="430" ry="70" fill="#7dffd6" opacity=".35"/>
+  </g>
+
+  
+  <rect y="860" width="1920" height="340" fill="#06101f"/>
+  <g filter="url(#glow)" opacity=".45">
+    <ellipse cx="900" cy="1010" rx="800" ry="50" fill="#3dffb0"/>
+    <ellipse cx="1350" cy="1080" rx="520" ry="40" fill="#35c7ff"/>
+  </g>
+
+  
+  <rect x="0" y="640" width="1920" height="390" fill="url(#pinesBack)" filter="url(#soft)" opacity=".9"/>
+  <rect x="0" y="780" width="1920" height="260" fill="url(#pinesFront)"/>
+  <rect y="1030" width="1920" height="170" fill="#04080f"/>
+</svg>

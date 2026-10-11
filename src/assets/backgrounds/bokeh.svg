@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090c26"/>
+      <stop offset=".55" stop-color="#1a1042"/>
+      <stop offset="1" stop-color="#2d0f45"/>
+    </linearGradient>
+    <filter id="b60" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="60"/></filter>
+    <filter id="b14" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .6 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1200" fill="url(#bg)"/>
+
+  
+  <g filter="url(#b60)">
+    <circle cx="380" cy="360" r="300" fill="#ff4fa3" opacity=".35"/>
+    <circle cx="1500" cy="300" r="340" fill="#5ad1ff" opacity=".3"/>
+    <circle cx="1000" cy="900" r="360" fill="#8a7bff" opacity=".35"/>
+    <circle cx="1700" cy="940" r="260" fill="#ffb13b" opacity=".25"/>
+  </g>
+
+  
+  <g filter="url(#b14)">
+    <circle cx="260" cy="760" r="62" fill="#ff4fa3" opacity=".55"/>
+    <circle cx="520" cy="560" r="44" fill="#ffb13b" opacity=".6"/>
+    <circle cx="700" cy="860" r="78" fill="#5ad1ff" opacity=".5"/>
+    <circle cx="860" cy="420" r="52" fill="#8a7bff" opacity=".6"/>
+    <circle cx="1120" cy="640" r="70" fill="#ff4fa3" opacity=".45"/>
+    <circle cx="1320" cy="820" r="58" fill="#4dffb8" opacity=".45"/>
+    <circle cx="1480" cy="520" r="84" fill="#ffb13b" opacity=".4"/>
+    <circle cx="1640" cy="700" r="46" fill="#5ad1ff" opacity=".6"/>
+    <circle cx="1780" cy="420" r="60" fill="#8a7bff" opacity=".5"/>
+    <circle cx="140" cy="480" r="48" fill="#4dffb8" opacity=".5"/>
+    <circle cx="1000" cy="260" r="40" fill="#ffb13b" opacity=".55"/>
+  </g>
+  <g filter="url(#b5)">
+    <circle cx="420" cy="940" r="26" fill="#ffb13b" opacity=".7"/>
+    <circle cx="610" cy="320" r="22" fill="#5ad1ff" opacity=".7"/>
+    <circle cx="980" cy="1010" r="30" fill="#ff4fa3" opacity=".65"/>
+    <circle cx="1230" cy="380" r="24" fill="#4dffb8" opacity=".65"/>
+    <circle cx="1560" cy="1000" r="28" fill="#8a7bff" opacity=".7"/>
+    <circle cx="1860" cy="820" r="22" fill="#ffb13b" opacity=".7"/>
+    <circle cx="80" cy="900" r="24" fill="#5ad1ff" opacity=".65"/>
+    <circle cx="760" cy="620" r="18" fill="#fff" opacity=".5"/>
+    <circle cx="1400" cy="180" r="20" fill="#fff" opacity=".45"/>
+  </g>
+
+  <rect width="1920" height="1200" filter="url(#grain)" opacity=".08"/>
+</svg>
